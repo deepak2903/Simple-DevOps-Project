@@ -52,7 +52,7 @@ Ansible is an open-source automation platform. It is very, very simple to set up
 
    ```
    
-   1. Password authentication. 
+1. Password authentication. 
    ```sh
    vi /etc/ssh/sshd_config
    # PasswordAuthentication yes
