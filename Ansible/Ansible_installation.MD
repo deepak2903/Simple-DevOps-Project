@@ -20,7 +20,7 @@ Ansible is an open-source automation platform. It is very, very simple to set up
    ansible --version
    ```
    
-1. Create a user called ansadmin (on Control node and Managed host)  
+1. Create a user called ansadmin (on Control node and Target host)  
    ```sh
    useradd ansadmin
    passwd ansadmin
@@ -51,6 +51,17 @@ Ansible is an open-source automation platform. It is very, very simple to set up
    usermod -aG docker ansadmin
 
    ```
+   
+   1. Password authentication. 
+   ```sh
+   vi /etc/ssh/sshd_config
+   # PasswordAuthentication yes
+   
+   # Reload sshd services 
+   service sshd reload
+  
+   ```
+   
 1. Create a directory /etc/ansible and create an inventory file called "hosts" add control node and managed hosts IP addresses to it. 
  
 ### Validation test
